@@ -5,14 +5,13 @@
 
 	<groupId>com.appleframework.security</groupId>
 	<artifactId>apple-security</artifactId>
-	<version>0.1.4.RELEASE</version>
+	<version>0.1.6.RELEASE</version>
 	<packaging>pom</packaging>
 
 	<name>apple-security</name>
 	<url>http://mvnrepo.appleframework.com</url>
 
 	<properties>
-		<project.version>0.1.4.RELEASE</project.version>
 		<java.version>1.7</java.version>
 		<log4j.version>1.2.16</log4j.version>
 		<spring.version>4.2.0.RELEASE</spring.version>
@@ -29,12 +28,14 @@
 				<groupId>com.appleframework.cache</groupId>
 				<artifactId>apple-cache-hazelcast</artifactId>
 				<version>${cache.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
 				<groupId>com.appleframework.cache</groupId>
 				<artifactId>apple-cache-redis</artifactId>
 				<version>${cache.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
@@ -138,11 +139,11 @@
 			<distributionManagement>
 				<repository>
 					<id>apple-releases</id>
-					<url>http://mvnrepo.appleframework.com/nexus/content/repositories/releases/</url>
+					<url>http://mvnrepo.appleframework.com:8081/nexus/content/repositories/releases/</url>
 				</repository>
 				<snapshotRepository>
 					<id>apple-snapshots</id>
-					<url>http://mvnrepo.appleframework.com/nexus/content/repositories/snapshots/</url>
+					<url>http://mvnrepo.appleframework.com:8081/nexus/content/repositories/snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
 		</profile>
